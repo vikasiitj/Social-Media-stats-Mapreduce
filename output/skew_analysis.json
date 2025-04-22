@@ -1,0 +1,60 @@
+{
+  "total_records": 99999,
+  "unique_keys": 99999,
+  "average_records_per_key": 1.0,
+  "skew_threshold": 999.99,
+  "skewed_keys": [],
+  "skewed_keys_count": 0,
+  "top_keys": [
+    [
+      "user000001",
+      1
+    ],
+    [
+      "user000002",
+      1
+    ],
+    [
+      "user000003",
+      1
+    ],
+    [
+      "user000004",
+      1
+    ],
+    [
+      "user000005",
+      1
+    ],
+    [
+      "user000006",
+      1
+    ],
+    [
+      "user000007",
+      1
+    ],
+    [
+      "user000008",
+      1
+    ],
+    [
+      "user000009",
+      1
+    ],
+    [
+      "user000010",
+      1
+    ]
+  ],
+  "distribution_stats": {
+    "min": 1,
+    "max": 1,
+    "median": 1.0,
+    "mean": 1.0,
+    "std_dev": 0.0,
+    "p90": 1.0,
+    "p95": 1.0,
+    "p99": 1.0
+  }
+}

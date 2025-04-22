@@ -1,0 +1,10 @@
+
+==================================================
+SOCIAL MEDIA ANALYTICS WORKFLOW SUMMARY
+==================================================
+Execution Time (s): 55.12
+Cleansed Records: 1000000
+Unique Users: 99999
+Trending Content Items: 21669
+Joined User Records: 99999
+==================================================
