@@ -1,0 +1,429 @@
+2025-04-14 00:42:58,961 - ERROR - Failed to load configuration: [Errno 2] No such file or directory: 'config.json'
+2025-04-14 00:42:58,961 - WARNING - Using default configuration
+2025-04-14 00:42:58,961 - INFO - Starting complete social media analytics workflow
+2025-04-14 00:42:58,961 - INFO - Executing: python "C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\local_mapreduce.py" --job all --input-dir "data" --output-dir "output"
+2025-04-14 00:42:59,425 - INFO - Command output: 
+=== Running Data Cleansing Job ===
+Running mapper: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\src\cleansing_mapper.py
+Mapper stderr: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\.venv\Scripts\python.exe: can't open file 'C:\\Users\\SourinGhosh\\PycharmProjects\\MapReduceWorkflow\\src\\src\\cleansing_mapper.py': [Errno 2] No such file or directory
+
+Warning: Mapper produced no output
+
+2025-04-14 00:42:59,426 - ERROR - Command error: Traceback (most recent call last):
+  File "C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\local_mapreduce.py", line 367, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\local_mapreduce.py", line 301, in main
+    success = success and run_map_reduce_job(
+                          ~~~~~~~~~~~~~~~~~~^
+        cleansingMapper,
+        ^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        cleansed_data_output
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\local_mapreduce.py", line 71, in run_map_reduce_job
+    with open(output_path, 'w', encoding='utf-8') as outfile:
+         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'output\\cleansed_data.txt'
+
+2025-04-14 00:42:59,426 - ERROR - Workflow failed after 0.47 seconds
+2025-04-14 00:44:18,309 - ERROR - Failed to load configuration: [Errno 2] No such file or directory: 'config.json'
+2025-04-14 00:44:18,309 - WARNING - Using default configuration
+2025-04-14 00:44:18,309 - INFO - Starting complete social media analytics workflow
+2025-04-14 00:44:18,309 - INFO - Executing: python "C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\local_mapreduce.py" --job all --input-dir "data" --output-dir "output"
+2025-04-14 00:44:19,854 - INFO - Command output: 
+=== Running Data Cleansing Job ===
+Running mapper: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\src\cleansing_mapper.py
+Mapper stderr: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\.venv\Scripts\python.exe: can't open file 'C:\\Users\\SourinGhosh\\PycharmProjects\\MapReduceWorkflow\\src\\src\\cleansing_mapper.py': [Errno 2] No such file or directory
+
+Warning: Mapper produced no output
+
+=== Running Action Aggregation Job ===
+Running mapper: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\src\action_aggregation_mapper.py
+Mapper stderr: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\.venv\Scripts\python.exe: can't open file 'C:\\Users\\SourinGhosh\\PycharmProjects\\MapReduceWorkflow\\src\\src\\action_aggregation_mapper.py': [Errno 2] No such file or directory
+
+Warning: Mapper produced no output
+
+=== Running Trending Content Job ===
+Running mapper: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\src\trending_content_mapper.py
+Mapper stderr: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\.venv\Scripts\python.exe: can't open file 'C:\\Users\\SourinGhosh\\PycharmProjects\\MapReduceWorkflow\\src\\src\\trending_content_mapper.py': [Errno 2] No such file or directory
+
+Warning: Mapper produced no output
+
+=== Running Data Join Job ===
+Running skew detection on output\user_activity.txt
+Running activity mapper: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\src\join_activity_mapper.py
+Activity mapper stderr: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\.venv\Scripts\python.exe: can't open file 'C:\\Users\\SourinGhosh\\PycharmProjects\\MapReduceWorkflow\\src\\src\\join_activity_mapper.py': [Errno 2] No such file or directory
+
+Running profile mapper: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\src\join_profile_mapper.py
+Profile mapper stderr: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\.venv\Scripts\python.exe: can't open file 'C:\\Users\\SourinGhosh\\PycharmProjects\\MapReduceWorkflow\\src\\src\\join_profile_mapper.py': [Errno 2] No such file or directory
+
+Sorting combined mapper output
+Running join reducer: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\src\join_reducer.py
+Reducer stderr: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\.venv\Scripts\python.exe: can't open file 'C:\\Users\\SourinGhosh\\PycharmProjects\\MapReduceWorkflow\\src\\src\\join_reducer.py': [Errno 2] No such file or directory
+
+Join job completed in 0.54 seconds
+Output written to output\joined_data.txt
+
+=== Workflow Completed Successfully ===
+Outputs written to output/
+Files:
+  - output\cleansed_data.txt
+  - output\user_activity.txt
+  - output\trending_content.txt
+  - output\joined_data.txt
+
+2025-04-14 00:44:19,854 - INFO - Complete workflow executed successfully in 1.55 seconds
+2025-04-14 00:44:19,854 - INFO - Collecting workflow statistics
+2025-04-14 00:44:19,855 - INFO - 
+==================================================
+SOCIAL MEDIA ANALYTICS WORKFLOW SUMMARY
+==================================================
+Execution Time (s): 1.55
+Cleansed Records: 0
+Unique Users: 0
+Trending Content Items: 0
+Joined User Records: 0
+==================================================
+2025-04-14 00:50:29,646 - ERROR - Failed to load configuration: [Errno 2] No such file or directory: 'config.json'
+2025-04-14 00:50:29,646 - WARNING - Using default configuration
+2025-04-14 00:50:29,646 - INFO - Starting complete social media analytics workflow
+2025-04-14 00:50:29,646 - INFO - Executing: python "C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\local_mapreduce.py" --job all --input-dir "data" --output-dir "output"
+2025-04-14 00:50:29,873 - INFO - Command output: 
+=== Running Data Cleansing Job ===
+Running mapper: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\src\cleansing_mapper.py
+
+2025-04-14 00:50:29,873 - ERROR - Command error: Traceback (most recent call last):
+  File "C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\local_mapreduce.py", line 367, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\local_mapreduce.py", line 301, in main
+    success = success and run_map_reduce_job(
+                          ~~~~~~~~~~~~~~~~~~^
+        cleansingMapper,
+        ^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        cleansed_data_output
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\local_mapreduce.py", line 54, in run_map_reduce_job
+    with open(input_path, 'r', encoding='utf-8') as infile:
+         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'data\\social_media_logs.txt'
+
+2025-04-14 00:50:29,873 - ERROR - Workflow failed after 0.23 seconds
+2025-04-14 00:53:24,156 - ERROR - Failed to load configuration: [Errno 2] No such file or directory: 'config.json'
+2025-04-14 00:53:24,156 - WARNING - Using default configuration
+2025-04-14 00:53:24,156 - INFO - Starting complete social media analytics workflow
+2025-04-14 00:53:24,156 - INFO - Executing: python "C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\local_mapreduce.py" --job all --input-dir "data" --output-dir "output"
+2025-04-14 00:53:25,864 - INFO - Command output: 
+=== Running Data Cleansing Job ===
+Running mapper: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\src\cleansing_mapper.py
+Mapper stderr: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\.venv\Scripts\python.exe: can't open file 'C:\\Users\\SourinGhosh\\PycharmProjects\\MapReduceWorkflow\\src\\src\\cleansing_mapper.py': [Errno 2] No such file or directory
+
+Warning: Mapper produced no output
+
+=== Running Action Aggregation Job ===
+Running mapper: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\src\action_aggregation_mapper.py
+Mapper stderr: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\.venv\Scripts\python.exe: can't open file 'C:\\Users\\SourinGhosh\\PycharmProjects\\MapReduceWorkflow\\src\\src\\action_aggregation_mapper.py': [Errno 2] No such file or directory
+
+Warning: Mapper produced no output
+
+=== Running Trending Content Job ===
+Running mapper: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\src\trending_content_mapper.py
+Mapper stderr: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\.venv\Scripts\python.exe: can't open file 'C:\\Users\\SourinGhosh\\PycharmProjects\\MapReduceWorkflow\\src\\src\\trending_content_mapper.py': [Errno 2] No such file or directory
+
+Warning: Mapper produced no output
+
+=== Running Data Join Job ===
+Running skew detection on output\user_activity.txt
+Running activity mapper: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\src\join_activity_mapper.py
+Activity mapper stderr: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\.venv\Scripts\python.exe: can't open file 'C:\\Users\\SourinGhosh\\PycharmProjects\\MapReduceWorkflow\\src\\src\\join_activity_mapper.py': [Errno 2] No such file or directory
+
+Running profile mapper: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\src\join_profile_mapper.py
+Profile mapper stderr: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\.venv\Scripts\python.exe: can't open file 'C:\\Users\\SourinGhosh\\PycharmProjects\\MapReduceWorkflow\\src\\src\\join_profile_mapper.py': [Errno 2] No such file or directory
+
+Sorting combined mapper output
+Running join reducer: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\src\join_reducer.py
+Reducer stderr: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\.venv\Scripts\python.exe: can't open file 'C:\\Users\\SourinGhosh\\PycharmProjects\\MapReduceWorkflow\\src\\src\\join_reducer.py': [Errno 2] No such file or directory
+
+Join job completed in 0.60 seconds
+Output written to output\joined_data.txt
+
+=== Workflow Completed Successfully ===
+Outputs written to output/
+Files:
+  - output\cleansed_data.txt
+  - output\user_activity.txt
+  - output\trending_content.txt
+  - output\joined_data.txt
+
+2025-04-14 00:53:25,864 - INFO - Complete workflow executed successfully in 1.71 seconds
+2025-04-14 00:53:25,864 - INFO - Collecting workflow statistics
+2025-04-14 00:53:25,865 - INFO - 
+==================================================
+SOCIAL MEDIA ANALYTICS WORKFLOW SUMMARY
+==================================================
+Execution Time (s): 1.71
+Cleansed Records: 0
+Unique Users: 0
+Trending Content Items: 0
+Joined User Records: 0
+==================================================
+2025-04-14 00:57:51,800 - ERROR - Failed to load configuration: [Errno 2] No such file or directory: 'config.json'
+2025-04-14 00:57:51,801 - WARNING - Using default configuration
+2025-04-14 00:57:51,801 - INFO - Starting complete social media analytics workflow
+2025-04-14 00:57:51,801 - INFO - Executing: python "C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\local_mapreduce.py" --job all --input-dir "data" --output-dir "output"
+2025-04-14 00:57:54,350 - INFO - Command output: Base directory: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src
+Project root: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow
+Source directory: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src
+
+=== Running Data Cleansing Job ===
+Running mapper: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\cleansing_mapper.py
+Mapper stderr: reporter:counter:DataQuality,invalid_timestamp,1000000
+reporter:counter:DataQuality,malformed_json,0
+reporter:counter:DataQuality,missing_fields,0
+reporter:counter:DataQuality,total_discarded,1000000
+
+Warning: Mapper produced no output
+
+=== Running Action Aggregation Job ===
+Running mapper: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\action_aggregation_mapper.py
+Warning: Mapper produced no output
+
+=== Running Trending Content Job ===
+Running mapper: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\trending_content_mapper.py
+Warning: Mapper produced no output
+
+=== Running Data Join Job ===
+Running skew detection on C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\output\user_activity.txt
+Running activity mapper: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\join_activity_mapper.py
+Running profile mapper: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\join_profile_mapper.py
+Sorting combined mapper output
+Running join reducer: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\join_reducer.py
+Reducer stderr: Error processing line: , Error: not enough values to unpack (expected 2, got 1)
+
+Join job completed in 0.58 seconds
+Output written to C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\output\joined_data.txt
+
+=== Workflow Completed Successfully ===
+Outputs written to output/
+Files:
+  - C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\output\cleansed_data.txt
+  - C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\output\user_activity.txt
+  - C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\output\trending_content.txt
+  - C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\output\joined_data.txt
+
+2025-04-14 00:57:54,350 - INFO - Complete workflow executed successfully in 2.55 seconds
+2025-04-14 00:57:54,350 - INFO - Collecting workflow statistics
+2025-04-14 00:57:54,352 - INFO - 
+==================================================
+SOCIAL MEDIA ANALYTICS WORKFLOW SUMMARY
+==================================================
+Execution Time (s): 2.55
+Cleansed Records: 0
+Unique Users: 0
+Trending Content Items: 0
+Joined User Records: 0
+==================================================
+2025-04-15 15:54:20,159 - ERROR - Failed to load configuration: [Errno 2] No such file or directory: 'config.json'
+2025-04-15 15:54:20,160 - WARNING - Using default configuration
+2025-04-15 15:54:20,160 - INFO - Starting complete social media analytics workflow
+2025-04-15 15:54:20,160 - INFO - Executing: python "C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\local_mapreduce.py" --job all --input-dir "data" --output-dir "output"
+2025-04-15 15:55:13,414 - INFO - Command output: Base directory: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src
+Project root: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow
+Source directory: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src
+
+=== Running Data Cleansing Job ===
+Running mapper: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\cleansing_mapper.py
+Mapper stderr: reporter:counter:DataQuality,invalid_timestamp,0
+reporter:counter:DataQuality,malformed_json,0
+reporter:counter:DataQuality,missing_fields,0
+reporter:counter:DataQuality,total_discarded,0
+
+Sorting mapper output
+Running reducer: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\cleansing_reducer.py
+Job completed in 39.30 seconds
+Output written to C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\output\cleansed_data.txt
+
+=== Running Action Aggregation Job ===
+Running mapper: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\action_aggregation_mapper.py
+Sorting mapper output
+Running reducer: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\action_aggregation_reducer.py
+Job completed in 4.49 seconds
+Output written to C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\output\user_activity.txt
+
+=== Running Trending Content Job ===
+Running mapper: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\trending_content_mapper.py
+Sorting mapper output
+Running combiner: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\trending_content_combiner.py
+Running reducer: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\trending_content_reducer.py
+Reducer stderr: reporter:counter:TrendingStats,ThresholdUsed,5
+
+Job completed in 6.35 seconds
+Output written to C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\output\trending_content.txt
+
+=== Running Data Join Job ===
+Running skew detection on C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\output\user_activity.txt
+Running activity mapper: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\join_activity_mapper.py
+Running profile mapper: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\join_profile_mapper.py
+Sorting combined mapper output
+Running join reducer: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\join_reducer.py
+Reducer stderr: Error processing line: , Error: not enough values to unpack (expected 2, got 1)
+
+Join job completed in 2.08 seconds
+Output written to C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\output\joined_data.txt
+
+=== Workflow Completed Successfully ===
+Outputs written to output/
+Files:
+  - C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\output\cleansed_data.txt
+  - C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\output\user_activity.txt
+  - C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\output\trending_content.txt
+  - C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\output\joined_data.txt
+
+2025-04-15 15:55:13,415 - INFO - Complete workflow executed successfully in 53.26 seconds
+2025-04-15 15:55:13,415 - INFO - Collecting workflow statistics
+2025-04-15 15:55:13,872 - INFO - 
+==================================================
+SOCIAL MEDIA ANALYTICS WORKFLOW SUMMARY
+==================================================
+Execution Time (s): 53.71
+Cleansed Records: 1000000
+Unique Users: 99999
+Trending Content Items: 21669
+Joined User Records: 0
+==================================================
+2025-04-15 15:58:00,834 - INFO - Starting complete social media analytics workflow
+2025-04-15 15:58:00,834 - INFO - Executing: python "C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\local_mapreduce.py" --job all --input-dir "data" --output-dir "output"
+2025-04-15 15:58:57,532 - INFO - Command output: Base directory: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src
+Project root: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow
+Source directory: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src
+
+=== Running Data Cleansing Job ===
+Running mapper: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\cleansing_mapper.py
+Mapper stderr: reporter:counter:DataQuality,invalid_timestamp,0
+reporter:counter:DataQuality,malformed_json,0
+reporter:counter:DataQuality,missing_fields,0
+reporter:counter:DataQuality,total_discarded,0
+
+Sorting mapper output
+Running reducer: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\cleansing_reducer.py
+Job completed in 40.05 seconds
+Output written to C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\output\cleansed_data.txt
+
+=== Running Action Aggregation Job ===
+Running mapper: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\action_aggregation_mapper.py
+Sorting mapper output
+Running reducer: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\action_aggregation_reducer.py
+Job completed in 4.99 seconds
+Output written to C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\output\user_activity.txt
+
+=== Running Trending Content Job ===
+Running mapper: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\trending_content_mapper.py
+Sorting mapper output
+Running combiner: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\trending_content_combiner.py
+Running reducer: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\trending_content_reducer.py
+Reducer stderr: reporter:counter:TrendingStats,ThresholdUsed,5
+
+Job completed in 7.54 seconds
+Output written to C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\output\trending_content.txt
+
+=== Running Data Join Job ===
+Running skew detection on C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\output\user_activity.txt
+Running activity mapper: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\join_activity_mapper.py
+Running profile mapper: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\join_profile_mapper.py
+Sorting combined mapper output
+Running join reducer: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\join_reducer.py
+Reducer stderr: Error processing line: , Error: not enough values to unpack (expected 2, got 1)
+
+Join job completed in 3.02 seconds
+Output written to C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\output\joined_data.txt
+
+=== Workflow Completed Successfully ===
+Outputs written to output/
+Files:
+  - C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\output\cleansed_data.txt
+  - C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\output\user_activity.txt
+  - C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\output\trending_content.txt
+  - C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\output\joined_data.txt
+
+2025-04-15 15:58:57,533 - INFO - Complete workflow executed successfully in 56.70 seconds
+2025-04-15 15:58:57,533 - INFO - Collecting workflow statistics
+2025-04-15 15:58:58,306 - INFO - 
+==================================================
+SOCIAL MEDIA ANALYTICS WORKFLOW SUMMARY
+==================================================
+Execution Time (s): 57.47
+Cleansed Records: 1000000
+Unique Users: 99999
+Trending Content Items: 21669
+Joined User Records: 0
+==================================================
+2025-04-15 16:17:02,702 - INFO - Starting complete social media analytics workflow
+2025-04-15 16:17:02,702 - INFO - Executing: python "C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\local_mapreduce.py" --job all --input-dir "data" --output-dir "output"
+2025-04-15 16:17:57,320 - INFO - Command output: Base directory: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src
+Project root: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow
+Source directory: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src
+
+=== Running Data Cleansing Job ===
+Running mapper: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\cleansing_mapper.py
+Mapper stderr: reporter:counter:DataQuality,invalid_timestamp,0
+reporter:counter:DataQuality,malformed_json,0
+reporter:counter:DataQuality,missing_fields,0
+reporter:counter:DataQuality,total_discarded,0
+
+Sorting mapper output
+Running reducer: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\cleansing_reducer.py
+Job completed in 37.79 seconds
+Output written to C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\output\cleansed_data.txt
+
+=== Running Action Aggregation Job ===
+Running mapper: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\action_aggregation_mapper.py
+Sorting mapper output
+Running reducer: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\action_aggregation_reducer.py
+Job completed in 4.83 seconds
+Output written to C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\output\user_activity.txt
+
+=== Running Trending Content Job ===
+Running mapper: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\trending_content_mapper.py
+Sorting mapper output
+Running combiner: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\trending_content_combiner.py
+Running reducer: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\trending_content_reducer.py
+Reducer stderr: reporter:counter:TrendingStats,ThresholdUsed,5
+
+Job completed in 6.56 seconds
+Output written to C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\output\trending_content.txt
+
+=== Running Data Join Job ===
+Running skew detection on C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\output\user_activity.txt
+Running activity mapper: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\join_activity_mapper.py
+Running profile mapper: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\join_profile_mapper.py
+Sorting combined mapper output
+Running join reducer: C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\src\join_reducer.py
+Join job completed in 4.49 seconds
+Output written to C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\output\joined_data.txt
+
+=== Workflow Completed Successfully ===
+Outputs written to output/
+Files:
+  - C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\output\cleansed_data.txt
+  - C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\output\user_activity.txt
+  - C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\output\trending_content.txt
+  - C:\Users\SourinGhosh\PycharmProjects\MapReduceWorkflow\output\joined_data.txt
+
+2025-04-15 16:17:57,321 - INFO - Complete workflow executed successfully in 54.62 seconds
+2025-04-15 16:17:57,321 - INFO - Collecting workflow statistics
+2025-04-15 16:17:57,822 - INFO - 
+==================================================
+SOCIAL MEDIA ANALYTICS WORKFLOW SUMMARY
+==================================================
+Execution Time (s): 55.12
+Cleansed Records: 1000000
+Unique Users: 99999
+Trending Content Items: 21669
+Joined User Records: 99999
+==================================================
